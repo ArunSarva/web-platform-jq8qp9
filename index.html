@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+    </nav>
+    <main>
+      <div>
+        <h3 class="heading">Assessment result | QAUser15</h3>
+        <div class="firstContaner">
+          <div class="player">
+            <div class="player-track-meta">
+              <div class="player-controls">
+                <button
+                  class="player-play-btn"
+                  role="button"
+                  aria-label="Play"
+                  data-playing="false"
+                >
+                  <div class="player-icon-play">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <title>play</title>
+                      <polygon
+                        class="icon-play"
+                        points="19.05 12 6 3.36 6 20.64 19.05 12"
+                      />
+                      <rect class="icon-container" width="24" height="24" />
+                    </svg>
+                  </div>
+
+                  <div class="player-icon-pause hidden">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <title>pause</title>
+                      <g>
+                        <rect
+                          class="icon-pause"
+                          x="6"
+                          y="3.26"
+                          width="4"
+                          height="17.48"
+                        />
+                        <rect
+                          class="icon-pause"
+                          x="14"
+                          y="3.26"
+                          width="4"
+                          height="17.48"
+                        />
+                      </g>
+                      <rect class="icon-container" width="24" height="24" />
+                    </svg>
+                  </div>
+                </button>
+                <div class="player-timeline">
+                  <div class="player-progress">
+                    <div class="player-progress-filled"></div>
+                  </div>
+                  <span class="player-time player-time-current">00:00</span>
+                </div>
+              </div>
+
+              <audio
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/858/outfoxing.mp3"
+                crossorigin="anonymous"
+              ></audio>
+            </div>
+          </div>
+          <img src="..\Assets\download_btn.png" alt="" />
+          <button class="download">Download</button>
+        </div>
+        <div class="secondontaner">
+          <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'London')">
+              Display
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')">
+              JSON
+            </button>
+          </div>
+          <div id="London" class="tabcontent">
+            <p>Today was a beautiful day</p>
+          </div>
+
+          <div id="Paris" class="tabcontent">
+            <p></p>
+          </div>
+        </div>
+        <div class="thirdContaner">
+          <div class="names">
+            <div class="color1"></div>
+            <div>misspronunciations</div>
+          </div>
+          <div class="names">
+            <div class="color2"></div>
+            <div>omissions</div>
+          </div>
+          <div class="names">
+            <div class="color3"></div>
+            <div>insertions</div>
+          </div>
+        </div>
+        <div class="fourthContaner">
+          <div>
+            <input
+              type="range"
+              class="c-rng"
+              min="0"
+              max="360"
+              step="1"
+              value="75"
+              data-range="circular"
+            />
+          </div>
+          <div>
+            <input
+              type="range"
+              class="c-rng"
+              min="0"
+              max="100"
+              step="1"
+              value="82"
+              data-range="circular"
+              data-modifier="c-rng--tomato"
+            />
+          </div>
+          <div>
+            <input
+              type="range"
+              class="c-rng"
+              min="0"
+              max="150"
+              step="1"
+              value="50"
+              data-range="circular"
+              data-modifier="c-rng--darkcyan"
+            />
+          </div>
+          <div>
+            <input
+              type="range"
+              class="c-rng"
+              min="0"
+              max="150"
+              step="1"
+              value="50"
+              data-range="circular"
+              data-modifier="c-rng--darkcyan"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
