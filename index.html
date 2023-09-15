@@ -8,9 +8,6 @@
     <script type="module" src="script.js"></script>
   </head>
   <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-    </nav>
     <main>
       <div>
         <h3 class="heading">Assessment result | QAUser15</h3>
@@ -25,7 +22,7 @@
                   data-playing="false"
                 >
                   <div class="player-icon-play">
-                    <svg
+                    <!-- <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
@@ -37,7 +34,8 @@
                         points="19.05 12 6 3.36 6 20.64 19.05 12"
                       />
                       <rect class="icon-container" width="24" height="24" />
-                    </svg>
+                    </svg> -->
+                    <img src="~\..\Assets\play.png" alt="">
                   </div>
 
                   <div class="player-icon-pause hidden">
@@ -72,7 +70,7 @@
                   <div class="player-progress">
                     <div class="player-progress-filled"></div>
                   </div>
-                  <span class="player-time player-time-current">00:00</span>
+                  <span class="player-time player-time-current">00:00s</span>
                 </div>
               </div>
 
@@ -82,90 +80,152 @@
               ></audio>
             </div>
           </div>
-          <img src="..\Assets\download_btn.png" alt="" />
-          <button class="download">Download</button>
+         
+          <button class="download"> <img style="height: 15px;
+    margin-right: 10px;" src="~\..\Assets\download.png" alt="" />Download</button>
         </div>
         <div class="secondontaner">
           <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'London')">
+            <button
+              class="tablinks"
+              id="defaultOpen"
+              onclick="openTab(event, 'Dispaly')"
+            >
               Display
             </button>
-            <button class="tablinks" onclick="openCity(event, 'Paris')">
+            <button class="tablinks" onclick="openTab(event, 'Json')">
               JSON
             </button>
           </div>
-          <div id="London" class="tabcontent">
-            <p>Today was a beautiful day</p>
+          <div id="Dispaly" class="tabcontent">
+            <p>today was a beautiful day. we had a great time taking a long   walk outside     in the morning. the countryside     was in full bloom, yet the air was crisp and cold. 
+towards the      end of the day, clouds came in, forecasting much needed rain.</p>
           </div>
 
-          <div id="Paris" class="tabcontent">
+          <div id="Json" class="tabcontent">
             <p></p>
           </div>
         </div>
         <div class="thirdContaner">
           <div class="names">
             <div class="color1"></div>
-            <div>misspronunciations</div>
+            <div style="margin-right: 50px">misspronunciations <img style="height: 10x;
+    margin-right: 5px;" src="~\..\Assets\info.png" alt="" /> : 1</div>
           </div>
           <div class="names">
             <div class="color2"></div>
-            <div>omissions</div>
+            <div style="margin-right: 50px">omissions <img style="height: 10x;
+    margin-right: 5px;" src="~\..\Assets\info.png" alt="" /> : 1</div>
           </div>
           <div class="names">
             <div class="color3"></div>
-            <div>insertions</div>
+            <div style="margin-right: 50px">insertions <img style="height: 10x;
+    margin-right: 5px;" src="~\..\Assets\info.png" alt="" /> : 1</div>
           </div>
         </div>
+        <style>
+          :root {
+            --PronScore: 50;
+            --AccuracyScore: 50;
+            --FluencyScore: 50;
+            --CompletenessScore: 50;
+          }
+        </style>
         <div class="fourthContaner">
-          <div>
-            <input
-              type="range"
-              class="c-rng"
-              min="0"
-              max="360"
-              step="1"
-              value="75"
-              data-range="circular"
-            />
+          <div class="progress">
+            <div
+              class="accuracy-progress-bar-pro"
+              style="
+                background: radial-gradient(
+                    closest-side,
+                    white 79%,
+                    transparent 80% 100%
+                  ),
+                  conic-gradient(
+                    #5567e8 calc(var(--PronScore) * 1%),
+                    lightgrey 0
+                  );
+                counter-reset: percentage var(--PronScore);
+              "
+            ></div>
+            <div>Pronunciation score <img style="height: 10x;
+    margin-right: 5px;" src="~\..\Assets\info.png" alt="" /></div>
           </div>
-          <div>
-            <input
-              type="range"
-              class="c-rng"
-              min="0"
-              max="100"
-              step="1"
-              value="82"
-              data-range="circular"
-              data-modifier="c-rng--tomato"
-            />
+          <div class="progress">
+            <div
+              class="accuracy-progress-bar"
+              style="
+                background: radial-gradient(
+                    closest-side,
+                    white 79%,
+                    transparent 80% 100%
+                  ),
+                  conic-gradient(
+                    #ef5600 calc(var(--PronScore) * 1%),
+                    lightgrey 0
+                  );
+                counter-reset: percentage var(--PronScore);
+              "
+            ></div>
+            <div>Accuracy score <img style="height: 10x;
+    margin-right: 5px;" src="~\..\Assets\info.png" alt="" /></div>
           </div>
-          <div>
-            <input
-              type="range"
-              class="c-rng"
-              min="0"
-              max="150"
-              step="1"
-              value="50"
-              data-range="circular"
-              data-modifier="c-rng--darkcyan"
-            />
+          <div class="progress">
+            <div
+              class="accuracy-progress-bar"
+              style="
+                background: radial-gradient(
+                    closest-side,
+                    white 79%,
+                    transparent 80% 100%
+                  ),
+                  conic-gradient(
+                    #8300c0 calc(var(--PronScore) * 1%),
+                    lightgrey 0
+                  );
+                counter-reset: percentage var(--PronScore);
+              "
+            ></div>
+            <div>Fluency score <img style="height: 10x;
+    margin-right: 5px;" src="~\..\Assets\info.png" alt="" /></div>
           </div>
-          <div>
-            <input
-              type="range"
-              class="c-rng"
-              min="0"
-              max="150"
-              step="1"
-              value="50"
-              data-range="circular"
-              data-modifier="c-rng--darkcyan"
-            />
+          <div class="progress">
+            <div
+              class="accuracy-progress-bar"
+              style="
+                background: radial-gradient(
+                    closest-side,
+                    white 79%,
+                    transparent 80% 100%
+                  ),
+                  conic-gradient(
+                    #00c2ce calc(var(--PronScore) * 1%),
+                    lightgrey 0
+                  );
+                counter-reset: percentage var(--PronScore);
+              "
+            ></div>
+            <div>Completeness score <img style="height: 10x;
+    margin-right: 5px;" src="~\..\Assets\info.png" alt="" /></div>
           </div>
         </div>
       </div>
     </main>
+    <script>
+      function openTab(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName('tabcontent');
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = 'none';
+        }
+        tablinks = document.getElementsByClassName('tablinks');
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(' active', '');
+        }
+        document.getElementById(cityName).style.display = 'block';
+        evt.currentTarget.className += ' active';
+      }
+      document.getElementById('defaultOpen').click();
+    </script>
   </body>
 </html>
